@@ -13,7 +13,7 @@ dotenv.config();
 const PORT = process.env.PORT;
 const password = process.env.PASSWORD_MONGO;
 const dbUser = process.env.User_MONGO;
-dotenv.config();
+
 
 
 console.log(process.env);
