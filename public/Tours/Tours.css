@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;    
+    background-image: url("https://media.istockphoto.com/id/1007954198/es/foto/edificios-medievales-en-tours-francia-la-ciudad-de-tours-se-encuentra-en-el-centro-oeste.jpg?s=2048x2048&w=is&k=20&c=i1HQhNPdAy-1C6ddcfX-UsAJs0ewtwKTIKd9qOwFr3M=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 650px;
+    margin-left: -8px;
+    margin-top: -10px;
+  }
+  
+
+  button {
+    padding: 1rem 2rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition-duration: 1s;
+    transition-property: border-top,
+        border-left,
+        border-bottom,
+        border-right,
+        box-shadow;
+    position: relative;
+}
+
+button:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+}
+
+.fondo {
+    background-attachment: fixed;
+    flex-direction: row-reverse;
+    object-fit: cover;
+    width: 700px;
+    height: 650px;
+    margin: 0 auto;
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container .btn-menu,
+.logo {
+    float: left;
+    line-height: 100px;
+}
+
+.container .btn-menu label {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.container .menu {
+    float: right;
+    line-height: 100px;
+}
+
+.container .menu a {
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.container .menu a:hover {
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+
+#btn-menu {
+    display: none;
+}
+
+.container-menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked~.container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+  .event-container {
+    background-color: #800000;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    color: #fff;
+    align-items: center;
+  }
+  
+  .event-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+  }
+  
+  .event-button {
+    background-color: #fff;
+    color: #800000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  #logo {
+    width: 10%;
+    margin: 30px 30px 0px 30px;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .event-date {
+    width: 200px;
+    text-align: start;
+  }
+  
+  .event-city {
+    width: 100px;
+  }
+  
+  #welcome {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  
+  img {
+    border-radius: 50%;
+  }
+  
+  @media (max-width: 930px) {
+    .event-container {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+    }
+    .event-city {
+      width: 100px;
+      margin-top: 10px;
+    }
+    .event-button {
+      margin-top: 10px;
+      width: 150px;
+    }
+    .event-date {
+      margin-top: 20px;
+      width: 200px;
+    }
+    .event-list {
+      justify-content: center;
+      align-items: center;
+    }
+  }

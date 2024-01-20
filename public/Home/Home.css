@@ -1,0 +1,363 @@
+body {
+    background-color: cyan;
+    background-image: url(../IMG/gettyimages-1174602116-612x612.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 650px;
+    margin-left: -8px;
+    margin-top: -10px;
+
+}
+
+.header {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+.contenedor p {
+    display: block;
+    width: fit-content;
+    align-items: last baseline;
+    color: blue;
+    font-size: 20px;
+    font-weight: bolder;
+
+    align-items: center;
+    text-align: center;
+
+    margin: 5px;
+}
+
+.dos {
+    background-color: blue;
+}
+
+.contenedor {
+    align-items: last baseline;
+    color: blue;
+
+    font-weight: bolder;
+
+    align-items: center;
+    text-align: center;
+
+    margin: 5px;
+
+}
+
+#nav-bg ul {
+    list-style: none;
+    text-align: center;
+}
+
+.nav {
+    display: inline;
+    text-align: right;
+    margin: 0 10px 0 0;
+}
+
+.nav a {
+    padding: 2px 7px 2px 7px;
+    color: #666;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition-duration: 1s;
+    transition-property: border-top,
+        border-left,
+        border-bottom,
+        border-right,
+        box-shadow;
+    position: relative;
+}
+
+.no-mov {
+    align-items: center;
+}
+
+.mov {
+    background-color: aliceblue;
+    display: block;
+    color: rgb(105, 41, 116);
+    margin: 0px 50px;
+    text-align: center;
+}
+
+
+
+.gasolina {
+    background-size: 100% 100%;
+    margin: 5px;
+    padding: 8rem;
+    text-align: center;
+}
+.imagen{
+    text-align: center;
+}
+img {
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    padding: 10px;        
+}
+
+h2 {
+    align-items: last baseline;
+    color: rgb(255, 0, 60);
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+    padding: auto 0%;
+    margin: 120px;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    background-color: deeppink;
+    color: rgb(198, 184, 30);
+}
+
+.uno span {
+    display: block;
+    /* align-items: last baseline; */
+    color: rgb(255, 0, 204);
+    font-size: 35px;
+    font-weight: bolder;   
+    text-align: center;
+    margin: 120px;
+}
+
+li {
+    font-size: 30px;
+    color: darksalmon;
+    font-weight: bolder;
+}
+
+.primera {
+    color: crimson;
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+    align-items: center;
+    padding: auto 0%;
+    font-weight: bolder;
+    margin: 5px;
+}
+
+.segunda {
+    font-size: 50px;
+    color: blueviolet;
+    font-weight: bolder;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.tercera {
+    color: yellow;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+}
+
+#musica {
+    font-size: 20px;
+    color: rgb(78, 112, 63);   
+    text-align: center;   
+    margin: 5px;
+    padding: 2px 5px;
+    border-radius: .5rem;
+    width: 60%;
+    padding: auto 0%;
+}
+
+.canciones {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    text-align: center;    
+    margin: 5px;
+    text-decoration: none;
+    border: none;
+}
+
+.boton {
+    margin: 10px;
+    padding: 5px 5px;
+    text-decoration: none;
+    background-color: rgb(167, 212, 91);
+    width: 40%;
+
+}
+
+li {
+    display: inline;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition-duration: 1s;
+    transition-property: border-top,
+        border-left,
+        border-bottom,
+        border-right,
+        box-shadow;
+    position: relative;
+}
+
+button:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+}
+
+.fondo {
+    background-attachment: fixed;
+    flex-direction: row-reverse;
+    object-fit: cover;
+    width: 700px;
+    height: 650px;
+    margin: 0 auto;
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container .btn-menu,
+.logo {
+    float: left;
+    line-height: 100px;
+}
+
+.container .btn-menu label {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.container .menu {
+    float: right;
+    line-height: 100px;
+}
+
+.container .menu a {
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.container .menu a:hover {
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+
+#btn-menu {
+    display: none;
+}
+
+.container-menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked~.container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
