@@ -101,7 +101,7 @@ router.put("/usuario/edit/:id", async (req, res) => {
 router.post("/album/agregar", async (req, res) => {
   try {
     let Album = await Album.create(req.body);
-    res.status(200).send(album);
+    res.status(200).send(Album);
   } catch (error) {
     res.status(500).send({ "error al agregar un album": error });
   }
@@ -110,10 +110,10 @@ router.post("/album/agregar", async (req, res) => {
 // Una ruta para editar un album.
 router.put("/album/:id", async (req, res) => {
   try {
-    const album = await Album.findByIdAndUpdate(req.params.id, req.body, {
+    const Album = await Album.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
-    res.status(200).send(album);
+    res.status(200).send(Album);
   } catch (error) {
     res.status(500).send({ "error al agregar un album": error });
   }
@@ -122,12 +122,12 @@ router.put("/album/:id", async (req, res) => {
 // Una ruta para agregar una canción del album.
 router.put("/song/:idAlbum", async (req, res) => {
   try {
-    let album = await Album.findById(req.params.idAlbum);
-    album.canciones.push(req.body);
-    await Album.findByIdAndUpdate(req.params.idAlbum, album, {
+    let Album = await Album.findById(req.params.idAlbum);
+    Album.canciones.push(req.body);
+    await Album.findByIdAndUpdate(req.params.idAlbum, Album, {
       new: true,
     });
-    res.status(200).send(album);
+    res.status(200).send(Album);
   } catch (error) {
     res.status(500).send({ "error solicitar todos los albums": error });
   }

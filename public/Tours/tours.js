@@ -1,7 +1,7 @@
 console.log("Ventas");
 
 
-let nameUsuario = prompt ("¿Cual es tu nombre?").toUpperCase();
+let nameUsuario = prompt ("¿Cual es tu nombre").toUpperCase();
  let edadUsuario = Number(prompt ("¿Cual es tu edad?"));
     alert(`Hola ${nameUsuario} de ${edadUsuario} 
     Te interesaria adquirir Tickets? `);    

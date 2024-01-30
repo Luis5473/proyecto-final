@@ -4,6 +4,12 @@ body {
     padding: 0;
     background-image: url("https://www.lacuarta.com/resizer/aJ2L2jUGuQXtewhJhqnRs-gYhIM=/1023x682/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/WRYHIMBL2JAKFBFNY6BWOKBPCU.jpg");
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 650px;
+    margin-left: -8px;
+    margin-top: -10px;
   }
   
   .sidebar {

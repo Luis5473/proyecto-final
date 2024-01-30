@@ -32,10 +32,10 @@ function renderAlbum(album) {
   divTitleDesccription.appendChild(h2);
 
   // agregamos los addEventListener a los botones de la sidebar
-  editAlbum.addEventListener("click", () => {
+  EditAlbum.addEventListener("click", () => {
     redirect(album._id, "../EditAlbum/EditAlbum.html");
   });
-  addSongs.addEventListener("click", () => {
+  AddSong.addEventListener("click", () => {
     redirect(album._id, `../AddSong/AddSong.html`);
   });
 }
@@ -86,7 +86,7 @@ function renderSongs(album) {
 
 const getAlbum = async () => {
   try {
-    const response = await axios.get(`http://localhost:3000/albums/albums${idAlbum}`);
+    const response = await axios.get(`http://localhost:3000/Album/Album${idAlbum}`);
     renderAlbum(response.data);
     const canciones = response.data.canciones;
     canciones.map((cancion, index) => {

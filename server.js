@@ -7,8 +7,8 @@ const mongoose = require("mongoose");
 const routes = require("./routes/index");
 
 const User = require("./public/moldels/User");
-const dotenv = require("dotenv");
 
+const dotenv = require("dotenv");
 dotenv.config();
 
 const PORT = process.env.PORT;
@@ -29,7 +29,7 @@ app.use("/healt", (req, res) => res.sendStatus(200))
 
 app.use(
   express.static("public", {
-    setHeaders: (res, path) => {
+    setHeader: (res, path) => {
       if (path.endsWith(".js")) {
         res.setHeader("Content-Type", "application/javascript");
       }

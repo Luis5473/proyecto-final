@@ -3,6 +3,13 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("https://media.todojujuy.com/p/a4ce38aae912df2cf0d9451508afa016/adjuntos/227/imagenes/003/246/0003246851/970x546/smart/2022-22jpg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;    
+    height: 650px;
+    margin-left: -8px;
+    margin-top: -10px;
   }
   
   .sidebar {
