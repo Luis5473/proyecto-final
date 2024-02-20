@@ -84,6 +84,7 @@ function renderSongs(album) {
 
 const getAlbum = async () => {
   try {
+    console.log('album');
     const response = await axios.get(
       `${window.location.host}/Album/Album${idAlbum}`
     );
