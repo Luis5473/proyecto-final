@@ -32,7 +32,7 @@ function renderAlbum(album) {
   divTitleDesccription.appendChild(h2);
 
   // agregamos los addEventListener a los botones de la sidebar
-  EditAlbum.addEventListener("click", () => {
+  editAlbum.addEventListener("click", () => {
     redirect(album._id, "../EditAlbum/EditAlbum.html");
   });
   AddSong.addEventListener("click", () => {
