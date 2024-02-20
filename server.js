@@ -13,7 +13,7 @@ dotenv.config();
 
 const PORT = process.env.PORT;
 const password = process.env.PASSWORD_MONGO;
-const dbUser = process.env.User_MONGO;
+const dbUser = process.env.USER_MONGO;
 
 const url = `mongodb+srv://${dbUser}:${password}@cluster0.p56p1dd.mongodb.net/?retryWrites=true&w=majority`;
 
