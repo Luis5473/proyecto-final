@@ -103,7 +103,7 @@ const getAlbum = async () => {
     console.log(error);
   }
 };
-console.log(getAlbum());
+
 getAlbum();
 
 const deleteSong = async (album, cancion) => {
