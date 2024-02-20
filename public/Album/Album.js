@@ -82,9 +82,8 @@ function renderSongs(album) {
   });
 }
 
-const getAlbum = async () => {
-  try {
-    
+const getAlbum = async (idAlbum) => {
+  try {    
     const response = await axios.get(
       `${window.location.host}/Album/Album${idAlbum}`
     );
@@ -104,7 +103,7 @@ const getAlbum = async () => {
   }
 };
 
-getAlbum();
+getAlbum(idAlbum);
 
 const deleteSong = async (album, cancion) => {
   try {
