@@ -82,11 +82,11 @@ function renderSongs(album) {
   });
 }
 
-
-
 const getAlbum = async () => {
   try {
-    const response = await axios.get(`http://localhost:3000/Album/Album${idAlbum}`);
+    const response = await axios.get(
+      `${window.location.host}/Album/Album${idAlbum}`
+    );
     renderAlbum(response.data);
     const canciones = response.data.canciones;
     canciones.map((cancion, index) => {
@@ -108,11 +108,13 @@ getAlbum();
 const deleteSong = async (album, cancion) => {
   try {
     await axios.put(
-      `http://localhost:3000/song/delete/${album}?idSong=${cancion}`
+      `${window.location.host}/song/delete/${album}?idSong=${cancion}`
     );
     await swal("cancion eliminada correctamente");
     ul.innerHTML = ""; // limpia la lista actual
-    const response = await axios.get(`http://localhost:3000/album/${idAlbum}`);
+    const response = await axios.get(
+      `${window.location.host}/album/${idAlbum}`
+    );
     const canciones = response.data.canciones;
     canciones.map((cancion, index) => {
       renderSongs(cancion, index);
@@ -127,4 +129,3 @@ const deleteSong = async (album, cancion) => {
     console.log(error);
   }
 };
-

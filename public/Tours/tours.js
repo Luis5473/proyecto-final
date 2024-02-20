@@ -16,10 +16,6 @@ span.textContent = `Hola bienvenido ${nameUsuario}`
 
 
 //clase 9
-//    function () {
- 
-
-// }
 
 
 function getTickets(ticket, ciudad) {    
