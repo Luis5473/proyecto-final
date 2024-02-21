@@ -1,3 +1,4 @@
+console.log("hola mundo");
 const titleAlbum = document.querySelector("#titleAlbum");
 const descriptionAlbum = document.querySelector("#descriptionAlbum");
 const ul = document.querySelector(".playlist");
