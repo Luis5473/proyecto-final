@@ -25,7 +25,7 @@ function getInputValues() {
 
 const addAlbum = async (e) => {
   e.preventDefault();
-  const objectToSend = getInputValue();
+  const objectToSend = getInputValues();
   try {
     let album = await axios.post(
       `${window.location.host}/album/agregar`,
