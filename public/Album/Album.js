@@ -36,7 +36,7 @@ function renderAlbum(album) {
   editAlbum.addEventListener("click", () => {
     redirect(album._id, "../EditAlbum/EditAlbum.html");
   });
-  AddSong.addEventListener("click", () => {
+  addSongs.addEventListener("click", () => {
     redirect(album._id, `../AddSong/AddSong.html`);
   });
 }
@@ -104,7 +104,32 @@ const getAlbum = async (idAlbum) => {
   }
 };
 
-getAlbum();
+getAlbum(idAlbum);
+
+// const deleteSong = async (album, cancion) => {
+//   try {
+//     await axios.put(
+//       `${window.location.host}/song/delete/${album}?idSong=${cancion}`
+//     );
+//     await swal("cancion eliminada correctamente");
+//     ul.innerHTML = ""; // limpia la lista actual
+//     const response = await axios.get(
+//       `${window.location.host}/album/${idAlbum}`
+//     );
+//     const canciones = response.data.canciones;
+//     canciones.map((cancion, index) => {
+//       renderSongs(cancion, index);
+//     });
+//     const trash = document.querySelectorAll("#delete");
+//     for (let i = 0; i < trash.length; i++) {
+//        trash[i].addEventListener("click");//  () => {
+//       //   deleteSong(idAlbum, canciones[i]._id);
+//       // }
+//     };
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 const deleteSong = async (album, cancion) => {
   try {
@@ -122,9 +147,9 @@ const deleteSong = async (album, cancion) => {
     });
     const trash = document.querySelectorAll("#delete");
     for (let i = 0; i < trash.length; i++) {
-      trash[i].addEventListener("click", () => {
-        deleteSong(idAlbum, canciones[i]._id);
-      });
+       trash[i].addEventListener("click", () => {
+         deleteSong(idAlbum, canciones[i]._id);
+       });
     }
   } catch (error) {
     console.log(error);
