@@ -1,10 +1,10 @@
-import { Schema, model } from "mongoose";
+const mongoose = require("mongoose");
 
-const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 
-const User = new Schema({
-  nombre: { type: String, require: true, min: 2 },
-  apellido: { type: String, require: true, min: 2 },
+const User = new mongoose.Schema({
+  nombre: { type: String, require:true, min: 2 },
+  apellido: { type: String, require:true, min: 2 },
   email: {
     type: String,
     required: true,
@@ -19,4 +19,4 @@ const User = new Schema({
   favoritos: { type: String },
 });
 
-export default model("User", User);
+module.exports = mongoose.model("User", User);
