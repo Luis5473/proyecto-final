@@ -2,8 +2,8 @@ console.log("hola mundo");
 const express = require("express");
 const router = express.Router();
 //modelos
-const User = require("../public/moldels/User.js");
-const Album = require("../public/moldels/Album.js");
+const User = require("../public/moldels/User.js").default;
+const Album = require("../public/moldels/Album.js").default;
 
 // requerimos las 2 sig librerias
 const bcrypt = require("bcrypt");
