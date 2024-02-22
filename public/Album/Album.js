@@ -104,7 +104,7 @@ const getAlbum = async (idAlbum) => {
   }
 };
 
-getAlbum(idAlbum);
+getAlbum();
 
 const deleteSong = async (album, cancion) => {
   try {
