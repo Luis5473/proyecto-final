@@ -14,26 +14,26 @@
     >
     <title>LOGIN</title>
   </head>
-  <body>
-    
+  <body>    
     <div class="container">
       <div class="form-content">
         <h1 id="title">LogIn</h1>
-        <form action="https://formspree.io/f/mzbngblw" method="POST">
+        <form action="https://formspree.io/f/mzbngblw" method="POST">        
           <div class="imput-group">
             <div class="imput-field">
               <i class="fa-solid fa-user" id="name-imput"></i>
-              <input type="text" id="name" placeholder="Name" required>
+              <input type="name" id="name" placeholder="Name" required>
             </div>
             <div class="imput-field">
               <i class="fa-solid fa-envelope"></i>
-              <input type="email" id="email" placeholder="Email" required>
+              <input type="email" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="imput-field">
               <i class="fa-solid fa-lock"></i>
               <input
                 type="password"
                 id="password"
+                name="password"
                 placeholder="Password"
                 required
               >
@@ -41,10 +41,10 @@
             <p>Olvidaste la contraseña <a href="#">click aqui</a></p>
           </div>
           <div class="btn-field">
-            <button id="signUp" type="button">
+            <button id="signUp" type="submit">
               Registro
             </button>
-            <button id="signIn" type="button" class="disabled">Login</button>
+            <button id="signIn" type="submit" class="disabled">Login</button>
           </div>
         </form>
       </div>
