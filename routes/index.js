@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router();
 //modelos
-const User = require("../public/moldels/User.js").default;
-const Album = require("../public/moldels/Album.js");
-                                            
+const User = require("../public/moldels/User").default;
+const Album = require("../public/moldels/Album");
+                                           
 // requerimos las 2 sig librerias
 const bcrypt = require("bcrypt");
 
-const { default: mongoose } = require("mongoose");
-// const mongoose = require(mongoose);
+// const { default: mongoose } = require("mongoose");
+const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 
 // rutas para que user haga el login

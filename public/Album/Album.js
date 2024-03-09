@@ -1,4 +1,3 @@
-import axios from 'axios';
 const titleAlbum = document.querySelector("#titleAlbum");
 const descriptionAlbum = document.querySelector("#descriptionAlbum");
 const ul = document.querySelector(".playlist");
@@ -82,11 +81,11 @@ function renderSongs(album) {
     window.open(album.link, "_blank");
   });
 }
-
-const getAlbum = async (idAlbum) => {
+// import { Axios } from "axios";  
+const getAlbum = async () => {
   try {    
     const response = await axios.get(
-      `${window.location.host}/Album/Album${idAlbum}`
+      `${window.location.host}./Album${idAlbum}`
     );
     renderAlbum(response.data);
     const canciones = response.data.canciones;
@@ -106,30 +105,6 @@ const getAlbum = async (idAlbum) => {
 
 getAlbum();
 
-// const deleteSong = async (album, cancion) => {
-//   try {
-//     await axios.put(
-//       `${window.location.host}/song/delete/${album}?idSong=${cancion}`
-//     );
-//     await swal("cancion eliminada correctamente");
-//     ul.innerHTML = ""; // limpia la lista actual
-//     const response = await axios.get(
-//       `${window.location.host}/album/${idAlbum}`
-//     );
-//     const canciones = response.data.canciones;
-//     canciones.map((cancion, index) => {
-//       renderSongs(cancion, index);
-//     });
-//     const trash = document.querySelectorAll("#delete");
-//     for (let i = 0; i < trash.length; i++) {
-//        trash[i].addEventListener("click");//  () => {
-//       //   deleteSong(idAlbum, canciones[i]._id);
-//       // }
-//     };
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
 
 const deleteSong = async (album, cancion) => {
   try {
@@ -147,11 +122,36 @@ const deleteSong = async (album, cancion) => {
     });
     const trash = document.querySelectorAll("#delete");
     for (let i = 0; i < trash.length; i++) {
-       trash[i].addEventListener("click", () => {
-         deleteSong(idAlbum, canciones[i]._id);
-       });
-    }
+       trash[i].addEventListener("click");//  () => {
+      //   deleteSong(idAlbum, canciones[i]._id);
+      // }
+    };
   } catch (error) {
     console.log(error);
   }
 };
+
+// const deleteSong = async (album, cancion) => {
+//   try {
+//     await axios.put(
+//       `${window.location.host}/song/delete/${album}?idSong=${cancion}`
+//     );
+//     await swal("cancion eliminada correctamente");
+//     ul.innerHTML = ""; // limpia la lista actual
+//     const response = await axios.get(
+//       `${window.location.host}/album/${idAlbum}`
+//     );
+//     const canciones = response.data.canciones;
+//     canciones.map((cancion, index) => {
+//       renderSongs(cancion, index);
+//     });
+//     const trash = document.querySelectorAll("#delete");
+//     for (let i = 0; i < trash.length; i++) {
+//        trash[i].addEventListener("click", () => {
+//          deleteSong(idAlbum, canciones[i]._id);
+//        });
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
