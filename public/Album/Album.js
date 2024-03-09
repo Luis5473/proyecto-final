@@ -1,4 +1,4 @@
-console.log("hola mundo");
+import axios from 'axios';
 const titleAlbum = document.querySelector("#titleAlbum");
 const descriptionAlbum = document.querySelector("#descriptionAlbum");
 const ul = document.querySelector(".playlist");
@@ -104,7 +104,7 @@ const getAlbum = async (idAlbum) => {
   }
 };
 
-getAlbum(idAlbum);
+getAlbum();
 
 // const deleteSong = async (album, cancion) => {
 //   try {
