@@ -6,6 +6,8 @@ const redirect = (id) => {
   window.location.href = `../Album/Album.html?album=${id}`;
 };
 
+
+
 // Generamos una funcion para guardar los valores que ingresa el usuario
 function getInputValues() {
   // Obtener los input del form
@@ -26,9 +28,10 @@ function getInputValues() {
   };
 }
 
+
 const getAlbum = async () => {
   try {
-    const { data } = await axios.get(
+    const { data } = await get(
       `${window.location.host}/album/${idAlbum}`
     );
     album = data;
@@ -43,7 +46,7 @@ const addSong = async (e) => {
   e.preventDefault();
   const objectToSend = getInputValues();
   try {
-    await axios.put(`${window.location.host}/AddSong/${idAlbum}`, objectToSend);
+    await put(`${window.location.host}/AddSong/${idAlbum}`, objectToSend);
     await swal("cancion agregada correctamente");
   } catch (error) {
     swal("Error al agregar la cancion");

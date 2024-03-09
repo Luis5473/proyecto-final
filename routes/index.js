@@ -3,7 +3,7 @@ const router = express.Router();
 //modelos
 const User = require("../public/moldels/User").default;
 const Album = require("../public/moldels/Album");
-                                           
+                             
 // requerimos las 2 sig librerias
 const bcrypt = require("bcrypt");
 

@@ -20,7 +20,7 @@ const url = `mongodb+srv://${dbUser}:${password}@cluster0.p56p1dd.mongodb.net/?r
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/healt", (_req, res) => res.sendStatus(200));
+app.use("/healt", (req, res) => res.sendStatus(200));
 
 app.use(
   express.static("public", {
@@ -35,8 +35,7 @@ app.use(
 app.use("/", routes);
 
 const connectMongo = async () => {
-  try {
-    
+  try {    
     await mongoose.connect(url);
     app.listen(PORT, () => {
       console.log(
