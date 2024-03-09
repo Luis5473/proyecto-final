@@ -5,7 +5,7 @@ const $singIn = document.getElementById("singIn"),
       $email = document.getElementById("email");
       
 
-      Document.addEventListener("click", (e) => {
+      document.addEventListener("click", (e) => {
         if (e.target ===$singIn) {
           if ($password.value !== "" && $name.value !=="") {
             e.preventDefault();
