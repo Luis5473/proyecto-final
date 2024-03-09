@@ -10,6 +10,7 @@ const onLoad = async () => {
 const logOut = async () => {
   try {
     const response = await axios.post("../../logout");
+   
   } catch (error) {
     console.log(error.message);
   }

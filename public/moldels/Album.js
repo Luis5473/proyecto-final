@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
- 
 const Album = new mongoose.Schema({
   titulo: { type: String, required: [true, "el titulo es requerido"] },
   descripcion: {

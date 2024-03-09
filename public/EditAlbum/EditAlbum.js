@@ -21,7 +21,7 @@ function getInputValues() {
 const query = window.location.search.split("=");
 const idAlbum = query[1];
 
-// const form = document.querySelector("form")
+const form = document.querySelector("form")
 const buttonEdit = document.querySelector(".edit-button");
 
 buttonEdit.addEventListener("click", (e) => {

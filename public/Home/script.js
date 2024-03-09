@@ -1,5 +1,5 @@
 const redirect = (id) => {
-  window.location.href = `./album/albums.html?album=${id}`;
+  window.location.href = `./Album/Album.html?album=${id}`;
 };
 
 const divAlbums = document.querySelector(".albums");

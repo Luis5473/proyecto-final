@@ -3,10 +3,10 @@ const buttonAdd = document.querySelector(".add-button");
 // Generamos una funcion para guardar los valores que ingresa el usuario
 function getInputValues() {
   // Obtener los input del form
-  const titleInput = document.getElementById("title");
-  const descriptionInput = document.getElementById("description");
-  const imageInput = document.getElementById("image");
-  const anoLanzamientoInput = document.getElementById("anoLanzamiento");
+  const titleInput = Document.getElementById("title");
+  const descriptionInput = Document.getElementById("description");
+  const imageInput = Document.getElementById("image");
+  const anoLanzamientoInput = Document.getElementById("anoLanzamiento");
 
   // Obtener los valores de los campos de entrada
   const titleValue = titleInput.value;

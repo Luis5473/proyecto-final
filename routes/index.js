@@ -1,10 +1,9 @@
-console.log("hola mundo");
 const express = require("express");
 const router = express.Router();
 //modelos
 const User = require("../public/moldels/User.js").default;
 const Album = require("../public/moldels/Album.js");
-
+                                            
 // requerimos las 2 sig librerias
 const bcrypt = require("bcrypt");
 
@@ -25,7 +24,7 @@ router.post("../public/InicioDeSesion/login.html", async (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
     const user = await User.findOne({ email: email });
-    console.log(user);
+   
     const match = bcrypt.compare(password, user, password);
     console.log(match);
     const payload = {
@@ -47,11 +46,6 @@ router.post("../public/InicioDeSesion/login.html", async (req, res) => {
 });
 
 // Ruta para crear un usuario
-
-//   const apellido = req.body.apellido
-//  const email = req.body.email
-//   const password = req.body.password
-// const nombre = req.body.nombre
 
 router.post("/createuser", async (req, res) => {
   const { password, email, nombre, apellido } = req.body;
@@ -135,7 +129,7 @@ router.put("/song/:idAlbum", async (req, res) => {
 });
 
 // Una ruta para eliminar una canción del album.
-router.put("/AddSong/delete/:idAlbum", async (req, res) => {
+router.put("/addSong/delete/:idAlbum", async (req, res) => {
   let idSong = req.query.idSong;
   try {
     let album = await Album.findById(req.params.idAlbum);

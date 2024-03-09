@@ -1,15 +1,15 @@
 
-const $singIn = document.getElementById("signIn"),
+const $singIn = document.getElementById("singIn"),
       $password = document.getElementById("password"),
       $name = document.getElementById("name"),
       $email = document.getElementById("email");
       
 
-      document.addEventListener("click", (e) => {
+      Document.addEventListener("click", (e) => {
         if (e.target ===$singIn) {
           if ($password.value !== "" && $name.value !=="") {
             e.preventDefault();
-            window.location.href = "../index.html";
+            window.location.href = "./login.html";
             
           } 
         }
