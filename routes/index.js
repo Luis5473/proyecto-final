@@ -1,25 +1,23 @@
 const express = require("express");
 const router = express.Router();
+
 //modelos
-const User = require("../public/moldels/User").default;
-const Album = require("../public/moldels/Album");
-                             
+const User = require("../public/moldels/User");
+const Album = require("../public/moldels/Album");  
+
 // requerimos las 2 sig librerias
 const bcrypt = require("bcrypt");
-
-// const { default: mongoose } = require("mongoose");
-const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 
 // rutas para que user haga el login
 const saltRounds = 10;
-
+const secret = "gabi"
 const hashPassword = async (password) => {
   const hash = await bcrypt.hash(password, saltRounds);
   return hash;
 };
 
-router.post("../public/InicioDeSesion/login.html", async (req, res) => {
+router.post("../public/InicioDeSesion/logIn.html", async (req, res) => {
   try {
     const email = req.body.email;
     const password = req.body.password;

@@ -3,10 +3,9 @@ const app = express();
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
-
 const routes = require("./routes/index");
-
-const User = require("./public/moldels/User");
+const user = require("./public/moldels/User");
+const album = require("./public/moldels/Album");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -19,10 +18,10 @@ const url = `mongodb+srv://${dbUser}:${password}@cluster0.p56p1dd.mongodb.net/?r
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
+app.use("/", routes);
 
-app.use("/healt", (req, res) => res.sendStatus(200));
-
-app.use(
+routes.use(
   express.static("public", {
     setHeader: (res, path) => {
       if (path.endsWith(".js")) {
@@ -31,8 +30,6 @@ app.use(
     },
   })
 );
-
-app.use("/", routes);
 
 const connectMongo = async () => {
   try {    
@@ -46,5 +43,8 @@ const connectMongo = async () => {
     console.log(error);
   }
 };
+const getProducts = () => {
+  const response = axios.get ("https://fakestoreapi.com/docs")
+}
 
 connectMongo();

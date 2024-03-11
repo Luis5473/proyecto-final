@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 
 const User = new mongoose.Schema({

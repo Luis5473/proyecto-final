@@ -2,14 +2,15 @@ const redirect = (id) => {
   window.location.href = `./Album/Album.html?album=${id}`;
 };
 
-const divAlbums = document.querySelector(".albums");
+const divAlbums = document.querySelector("gasolina");
 
 const renderAlbums = (album) => {
   const div = document.createElement("div");
   const imgAlbum = document.createElement("img");
   const iconTrash = document.createElement("i");
 
-  div.classList.add("albums-individual");
+  div.classList.add("gasolina");
+  console.log(album);
   // let urlPortada = album.portada
   let urlPortada = album.portada
     ? album.portada
@@ -30,7 +31,7 @@ const renderAlbums = (album) => {
 
 const getAlbums = async () => {
   try {
-    const response = await axios.get("../../Album/todos");
+    const response = await axios.get("../album/todos");    
     response.data.map((album) => {
       renderAlbums(album);
     });
