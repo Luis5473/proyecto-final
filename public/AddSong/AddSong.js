@@ -1,7 +1,7 @@
 const query = window.location.search.split("=");
 const idAlbum = query[1];
 let album;
-import axios from 'axios';
+
 
 const agregarSong = document.querySelector("#agregar");
 

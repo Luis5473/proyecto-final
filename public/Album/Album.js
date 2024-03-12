@@ -1,4 +1,4 @@
-import { logOut } from "../utils/utils.js";
+import axios from 'axios';
 const titleAlbum = document.querySelector("#titleAlbum");
 const descriptionAlbum = document.querySelector("#descriptionAlbum");
 const ul = document.querySelector(".playlist");
@@ -83,7 +83,7 @@ function renderSongs(album) {
     window.open(album.link, "_blank");
   });
 }
-import axios from 'axios';
+
 const getAlbum = async () => {
   try {    
     const response = await axios.get(      
