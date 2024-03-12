@@ -1,14 +1,15 @@
 const query = window.location.search.split("=");
 const idAlbum = query[1];
 let album;
+import axios from 'axios';
+
 const agregarSong = document.querySelector("#agregar");
+
 const redirect = (id) => {
   window.location.href = `../Album/Album.html?album=${id}`;
 };
 
-
-
-// Generamos una funcion para guardar los valores que ingresa el usuario
+// Obtener los valores del formulario
 function getInputValues() {
   // Obtener los input del form
   const titleInput = document.getElementById("title");
@@ -28,31 +29,37 @@ function getInputValues() {
   };
 }
 
-
+// Obtener información del álbum
 const getAlbum = async () => {
   try {
-    const { data } = await get(
-      `${window.location.host}/album/${idAlbum}`
+    const response = await axios.get(
+      `http://${window.location.host}/album/${idAlbum}`
     );
-    album = data;
+    album = response.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
+// Ejecutar la función para obtener información del álbum
 getAlbum();
 
+// Agregar canción al álbum
 const addSong = async (e) => {
   e.preventDefault();
   const objectToSend = getInputValues();
   try {
-    await put(`${window.location.host}/AddSong/${idAlbum}`, objectToSend);
-    await swal("cancion agregada correctamente");
+    // Utilizar axios.put para realizar la solicitud PUT
+    await axios.put(`${window.location.host}/AddSong/${idAlbum}`, objectToSend);
+    await swal("Canción agregada correctamente");
   } catch (error) {
-    swal("Error al agregar la cancion");
+    console.error(error);
+    swal("Error al agregar la canción");
   }
 };
 
+// Escuchar el evento de clic en el botón de agregar
 agregarSong.addEventListener("click", (e) => {
   addSong(e);
 });
+

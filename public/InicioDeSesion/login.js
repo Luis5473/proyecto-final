@@ -15,30 +15,30 @@ const $singIn = document.getElementById("singIn"),
         }
       });
      
-//  signIn.onclick = function () {
-//    nameInput.style.maxHeight = "0";
-//    title.innerHTML = "Login";
-//    signUp.classList.add("disable")
-//    signIn.classList.remove("disable")
-//  }
+ signIn.onclick = function () {
+   nameInput.style.maxHeight = "0";
+   title.innerHTML = "Login";
+   signUp.classList.add("disable")
+   signIn.classList.remove("disable")
+ }
 
-//  signUp.onclick = function () {
-//    nameInput.style.maxHeight = "0";
-//    title.innerHTML = "Login";
-//    signUp.classList.add("disable")
-//    signIn.classList.remove("disable")
-//  }
-
-
+ signUp.onclick = function () {
+   nameInput.style.maxHeight = "0";
+   title.innerHTML = "Login";
+   signUp.classList.add("disable")
+   signIn.classList.remove("disable")
+ }
 
 
-//       document.addEventListener("click",(e)=>{
-//         if (e.target === $submit) {
-//          if ($password.value !== "" && $username.value !== "") {
-//           e.preventDefault();
-//           window.location.href = "./index.html";
-//          } 
-//         }
-//       })
+
+
+      document.addEventListener("click",(e)=>{
+        if (e.target === $submit) {
+         if ($password.value !== "" && $username.value !== "") {
+          e.preventDefault();
+          window.location.href = "./index.html";
+         } 
+        }
+      })
 
 

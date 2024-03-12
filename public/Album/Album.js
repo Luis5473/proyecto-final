@@ -1,3 +1,4 @@
+import { logOut } from "../utils/utils.js";
 const titleAlbum = document.querySelector("#titleAlbum");
 const descriptionAlbum = document.querySelector("#descriptionAlbum");
 const ul = document.querySelector(".playlist");
@@ -6,6 +7,7 @@ const addSongs = document.querySelector("#AddSongs");
 
 const query = window.location.search.split("=");
 const idAlbum = query[1];
+
 
 const redirect = (id, url) => {
   window.location.href = `${url}?album=${id}`;
@@ -20,7 +22,7 @@ function renderAlbum(album) {
   const h2 = document.createElement("h2");
 
   // agregamos los estilos
-  h1.classList.add("#title");
+  h1.classList.add("title");
   h2.classList.add("description");
 
   // agregamos la info del album
@@ -81,12 +83,13 @@ function renderSongs(album) {
     window.open(album.link, "_blank");
   });
 }
-
+import axios from 'axios';
 const getAlbum = async () => {
   try {    
-    const response = await axios.get(
-      `${window.location.host}./Album${idAlbum}`
+    const response = await axios.get(      
+      `http://${window.location.host}/Album/${idAlbum}`      
     );
+    console.log(idAlbum);
     renderAlbum(response.data);
     const canciones = response.data.canciones;
     canciones.map((cancion, index) => {
@@ -102,6 +105,8 @@ const getAlbum = async () => {
     console.log(error);
   }
 };
+
+
 
 getAlbum();
 
@@ -122,10 +127,10 @@ const deleteSong = async (album, cancion) => {
     });
     const trash = document.querySelectorAll("#delete");
     for (let i = 0; i < trash.length; i++) {
-       trash[i].addEventListener("click");//  () => {
-      //   deleteSong(idAlbum, canciones[i]._id);
-      // }
-    };
+       trash[i].addEventListener("click", () => {
+         deleteSong(idAlbum, canciones[i]._id);
+       });
+    }
   } catch (error) {
     console.log(error);
   }

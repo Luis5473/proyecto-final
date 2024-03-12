@@ -5,7 +5,9 @@ const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes/index");
 const user = require("./public/moldels/User");
-const album = require("./public/moldels/Album");
+const Album = require("./public/moldels/Album");
+
+
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -20,6 +22,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/", routes);
+
 
 routes.use(
   express.static("public", {
@@ -43,8 +46,5 @@ const connectMongo = async () => {
     console.log(error);
   }
 };
-const getProducts = () => {
-  const response = axios.get ("https://fakestoreapi.com/docs")
-}
 
 connectMongo();

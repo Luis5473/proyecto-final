@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const axios = require('axios');
 //modelos
 const User = require("../public/moldels/User");
 const Album = require("../public/moldels/Album");  
@@ -8,6 +8,8 @@ const Album = require("../public/moldels/Album");
 // requerimos las 2 sig librerias
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+
+
 
 // rutas para que user haga el login
 const saltRounds = 10;
@@ -17,7 +19,7 @@ const hashPassword = async (password) => {
   return hash;
 };
 
-router.post("../public/InicioDeSesion/logIn.html", async (req, res) => {
+  router.post("/logIn", async (req, res) => {
   try {
     const email = req.body.email;
     const password = req.body.password;
