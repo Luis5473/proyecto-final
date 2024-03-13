@@ -9,75 +9,68 @@
     <title>Add Album</title>
 </head>
 
-<body>  
-  <header>                            
+<body>
+    <header>
         <div class="container">
-          <div class="btn-menu">
-              <label for="btn-menu">☰</label>
-          </div>
-          <div class="logo">
-              <h1>Daddy Yankee</h1>
-          </div>
-          <nav class="menu">                
-              <a href="../index.html">Inicio</a>
-             
-          </nav>
-      </div>
-  </header>
-  <div class="capa"></div>
-
-  <input type="checkbox" id="btn-menu">
-  <div class="container-menu">
-      <div class="cont-menu">
-          <nav>                
-              <a href="../AddAlbums/addAlbum.html">Other Albums</a>
-              <a href="../EditAlbum/EditAlbum.html">Edit Albums</a>
-              <a href="../AddSong/AddSong.html">Add Songs</a>
-              <a href="../Tours/Tours.html">Tours</a>
-              <a href="../Album/Album.html">Album</a>
-              <a href="../InicioDeSesion/login.html">Log Out</a>
-          </nav>
-          <label for="btn-menu">✖</label>
-      </div>
-  </div>  
-    
-        <h2>Add Album</h2>
-    
-        <div class="form-container">
-          <form>
-            <div class="form-group">
-              <label for="title">Title</label>
-              <input type="text" id="title" name="title" required >
+            <div class="btn-menu">
+                <label for="btn-menu">☰</label>
             </div>
-            <div class="form-grupo">
-              <label for="description">Description</label>
-              <textarea id="description" name="description" required></textarea>
+            <div class="logo">
+                <h1>Daddy Yankee</h1>
             </div>
-            <div class="form-group">
-              <label for="anoLanzamiento"> Año de lanzamiento</label>
-              <input
-                type="number"
-                id="anoLanzamiento"
-                name="añoLanzamiento"
-                required
-              >
-            </div>
-            <div class="form-group">
-              <label for="image">Add an image (URL)</label>
-              <input type="url" id="image" name="image" required >
-            </div>
-    
-            <div class="button-group">
-              <button type="submit" class="add-button">Agragar</button>
-              <button type="button" class="cancel-button">Cancel</button>
-            </div>
-          </form>
+            <nav class="menu">
+                <a href="../index.html">Inicio</a>
+            </nav>
         </div>
-        
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="./addAlbum.js"></script> 
+    </header>
+    <div class="capa"></div>
+
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <a href="../AddAlbums/addAlbum.html">Other Albums</a>
+                <a href="../EditAlbum/EditAlbum.html">Edit Albums</a>
+                <a href="../AddSong/AddSong.html">Add Songs</a>
+                <a href="../Tours/Tours.html">Tours</a>
+                <a href="../Album/Album.html">Album</a>
+                <a href="../InicioDeSesion/login.html">Log Out</a>
+            </nav>
+            <label for="btn-menu">✖</label>
+        </div>
+    </div>
+
+    <h2>Add Album</h2>
+
+    <div class="form-container">
+        <form id="albumForm">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="anoLanzamiento">Año de lanzamiento</label>
+                <input type="number" id="anoLanzamiento" name="anoLanzamiento" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Add an image (URL)</label>
+                <input type="url" id="image" name="image" required>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="add-button">Agregar</button>
+                <button type="button" class="cancel-button">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./addAlbum.js"></script>
 
 </body>
-
 </html>
