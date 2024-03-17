@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const objectToSend = getInputValues();
       try {
           const response = await axios.post(
-              `${window.location.host}/album/agregar`,
+              `http://${window.location.host}/album/agregar`,
               objectToSend
           );
           await swal({
