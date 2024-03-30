@@ -1,9 +1,8 @@
-import axios from 'axios';
 const titleAlbum = document.querySelector("#titleAlbum");
 const descriptionAlbum = document.querySelector("#descriptionAlbum");
 const ul = document.querySelector(".playlist");
 const editAlbum = document.querySelector("#editAlbum");
-const addSongs = document.querySelector("#AddSongs");
+const addSongs = document.querySelector("#addSongs");
 
 const query = window.location.search.split("=");
 const idAlbum = query[1];
@@ -105,8 +104,6 @@ const getAlbum = async () => {
     console.log(error);
   }
 };
-
-
 
 getAlbum();
 

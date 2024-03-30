@@ -1,5 +1,5 @@
 const redirect = (id) => {
-  window.location.href = `./Album/Album.html?album=${id}`;
+  window.location.href = `../public/Album/Album.html?album=${id}`;
 };
 
 const divAlbums = document.querySelector("gasolina");
@@ -34,6 +34,7 @@ const getAlbums = async () => {
     const response = await axios.get("../album/todos");    
     response.data.map((album) => {
       renderAlbums(album);
+      console.log(album);
     });
     const trash = document.querySelectorAll("i");
     for (let i = 0; i < trash.length; i++) {

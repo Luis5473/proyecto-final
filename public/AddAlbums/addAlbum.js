@@ -1,18 +1,18 @@
-// const buttonAdd = document.querySelector(".add-button");
-// import axios from 'axios';
-// // Generamos una funcion para guardar los valores que ingresa el usuario
-// function getInputValues() {
-//   // Obtener los input del form
-//   const titleInput = document.getElementById("title");
-//   const descriptionInput = document.getElementById("description");
-//   const imageInput = document.getElementById("image");
-//   const anoLanzamientoInput = document.getElementById("anoLanzamiento");
+const buttonAdd = document.querySelector(".add-button");
 
-//   // Obtener los valores de los campos de entrada
-//   const titleValue = titleInput.value;
-//   const descriptionValue = descriptionInput.value;
-//   const imageValue = imageInput.value;
-//   const anoLanzamientoValue = anoLanzamientoInput.value;
+// Generamos una funcion para guardar los valores que ingresa el usuario
+
+  // Obtener los input del form
+  const titleInput = document.getElementById("title");
+  const descriptionInput = document.getElementById("description");
+  const imageInput = document.getElementById("image");
+  const anoLanzamientoInput = document.getElementById("anoLanzamiento");
+
+  // Obtener los valores de los campos de entrada
+  const titleValue = titleInput.value;
+  const descriptionValue = descriptionInput.value;
+  const imageValue = imageInput.value;
+  const anoLanzamientoValue = anoLanzamientoInput.value;
 
 //   // Devolver los valores en un objeto
 //   return {

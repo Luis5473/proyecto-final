@@ -72,8 +72,7 @@ const addAlbum = async (e) => {
         let album = await axios.post(
           `http://${window.location.host}/album/${idAlbum}`, // Reemplaza "https://example.com" con tu URL correcta
            objectToSend,
-           console.log(location.host)
-        );
+          );
         await swal({
             title: "Album agregado correctamente!",
             text: `Album: ${album.data.titulo}`,
