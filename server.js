@@ -4,8 +4,8 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes/index");
-const user = require("./public/moldels/User");
-const Album = require("./public/moldels/Album");
+const user = require("./public/models/User");
+const Album = require("./public/models/Album");
 
 
 

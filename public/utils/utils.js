@@ -10,9 +10,9 @@ const onLoad = async () => {
 const logOut = async () => {
   try {
     const response = await axios.post("../../logout");
-    
+    window.location.href = "../InicioDeSesion/login.html";
   } catch (error) {
-    console.log(error.message);
+    console.error(error);
   }
 };
 

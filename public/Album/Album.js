@@ -108,52 +108,18 @@ const getAlbum = async () => {
 getAlbum();
 
 
-const deleteSong = async (album, cancion) => {
+window.deleteSong = async (album, cancion) => {
   try {
-    await axios.put(
-      `${window.location.host}/song/delete/${album}?idSong=${cancion}`
+    const response = await axios.delete(
+      `${window.location.host}/song/delete/${album}?songName=${cancion}`
     );
-    await swal("cancion eliminada correctamente");
-    ul.innerHTML = ""; // limpia la lista actual
-    const response = await axios.get(
-      `${window.location.host}/album/${idAlbum}`
-    );
-    const canciones = response.data.canciones;
-    canciones.map((cancion, index) => {
-      renderSongs(cancion, index);
-    });
-    const trash = document.querySelectorAll("#delete");
-    for (let i = 0; i < trash.length; i++) {
-       trash[i].addEventListener("click", () => {
-         deleteSong(idAlbum, canciones[i]._id);
-       });
+    if (response.status === 200) {
+      swal("Canción eliminada correctamente");
+      // Aquí puedes actualizar la lista de canciones en el DOM
+    } else {
+      swal("Error al eliminar la canción");
     }
   } catch (error) {
-    console.log(error);
+    swal("Error al eliminar la canción");
   }
 };
-
-// const deleteSong = async (album, cancion) => {
-//   try {
-//     await axios.put(
-//       `${window.location.host}/song/delete/${album}?idSong=${cancion}`
-//     );
-//     await swal("cancion eliminada correctamente");
-//     ul.innerHTML = ""; // limpia la lista actual
-//     const response = await axios.get(
-//       `${window.location.host}/album/${idAlbum}`
-//     );
-//     const canciones = response.data.canciones;
-//     canciones.map((cancion, index) => {
-//       renderSongs(cancion, index);
-//     });
-//     const trash = document.querySelectorAll("#delete");
-//     for (let i = 0; i < trash.length; i++) {
-//        trash[i].addEventListener("click", () => {
-//          deleteSong(idAlbum, canciones[i]._id);
-//        });
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };

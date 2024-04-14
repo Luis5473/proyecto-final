@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const axios = require('axios');
 // Modelos
-const User = require("../public/moldels/User");
-const Album = require("../public/moldels/Album");
+const User = require("../public/models/User");
+const Album = require("../public/models/Album");
 
 // Librerías de autenticación y encriptación
 const bcrypt = require("bcrypt");
@@ -32,8 +32,7 @@ router.post("/logIn", async (req, res) => {
     };
     
     const token = jwt.sign(payload, process.env.JWT_SECRET_KEY);
-    res.cookie("token", token);
-    res.status(200).json(payload);
+    res.status(200).json({ token, user: payload });
   } catch (error) {
     res.status(500).json({ message: "Error interno del servidor" });
   }

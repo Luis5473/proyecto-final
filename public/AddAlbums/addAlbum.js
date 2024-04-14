@@ -48,7 +48,7 @@ const buttonAdd = document.querySelector(".add-button");
 // });
 document.addEventListener("DOMContentLoaded", function () {
   const albumForm = document.getElementById("albumForm");
-  const buttonAdd = document.querySelector(".add-button");
+  const buttonAdd = document.getElementById('buttonAdd');
 
   // Función para obtener los valores del formulario
   function getInputValues() {

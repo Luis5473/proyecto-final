@@ -8,7 +8,7 @@ document.addEventListener("click", (e) => {
     if ($password.value !== "" && $username.value !=="") {
       e.preventDefault();
       window.location.href = "../InicioDeSecion/login.html";
-alert
+      alert("Formulario enviado correctamente");
     }
   }
 });
